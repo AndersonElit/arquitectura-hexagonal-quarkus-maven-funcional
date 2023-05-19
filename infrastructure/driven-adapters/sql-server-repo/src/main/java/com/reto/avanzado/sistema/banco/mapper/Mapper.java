@@ -21,4 +21,8 @@ public class Mapper {
         return list;
     }
 
+    public static <S, D> void mapObjects(S source, D destination) {
+        modelMapper.map(source, destination);
+    }
+
 }

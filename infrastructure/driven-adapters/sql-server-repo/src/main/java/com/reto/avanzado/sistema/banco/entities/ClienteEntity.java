@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "clientes")
 public class ClienteEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
     private String identificacion;
