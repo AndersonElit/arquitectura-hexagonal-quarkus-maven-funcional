@@ -19,4 +19,12 @@ public class ApiBanco {
     public Uni<Void> saludo(Cliente cliente) {
         return clientePort.guardarCliente(cliente);
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
+    public Uni<Cliente> buscarCliente(@PathParam("id") Long id) {
+        return clientePort.buscarCliente(id);
+    }
+
 }

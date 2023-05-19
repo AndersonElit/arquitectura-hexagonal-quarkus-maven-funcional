@@ -5,4 +5,5 @@ import io.smallrye.mutiny.Uni;
 
 public interface ClientePort {
     Uni<Void> guardarCliente(Cliente cliente);
+    Uni<Cliente> buscarCliente(Long id);
 }

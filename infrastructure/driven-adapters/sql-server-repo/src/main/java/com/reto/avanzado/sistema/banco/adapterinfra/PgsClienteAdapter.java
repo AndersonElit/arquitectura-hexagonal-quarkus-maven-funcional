@@ -23,4 +23,10 @@ public class PgsClienteAdapter implements ClienteRepository {
         return repository.save(Mapper.map(cliente, ClienteEntity.class));
     }
 
+    @Override
+    public Uni<Cliente> buscarCliente(Long id) {
+        return repository.findById(ClienteEntity.class, id)
+                .map(entity -> Mapper.map(entity, Cliente.class));
+    }
+
 }

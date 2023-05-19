@@ -20,4 +20,9 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
         return sessionFactory.withTransaction((session, transaction) -> session.persist(entity));
     }
 
+    @Override
+    public <T> Uni<T> findById(Class<T> entityType, Long id) {
+        return sessionFactory.withSession(session -> session.find(entityType, id));
+    }
+
 }

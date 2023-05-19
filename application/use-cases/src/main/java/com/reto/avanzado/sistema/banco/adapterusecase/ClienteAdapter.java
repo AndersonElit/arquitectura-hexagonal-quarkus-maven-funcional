@@ -16,4 +16,9 @@ public class ClienteAdapter implements ClientePort {
         return clienteRepo.guardarCliente(cliente);
     }
 
+    @Override
+    public Uni<Cliente> buscarCliente(Long id) {
+        return clienteRepo.buscarCliente(id);
+    }
+
 }
