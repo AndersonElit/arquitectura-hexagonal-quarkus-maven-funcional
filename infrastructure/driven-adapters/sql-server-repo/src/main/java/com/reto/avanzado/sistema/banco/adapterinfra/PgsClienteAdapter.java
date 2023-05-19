@@ -4,14 +4,14 @@ import com.reto.avanzado.sistema.banco.Cliente;
 import com.reto.avanzado.sistema.banco.entities.ClienteEntity;
 import com.reto.avanzado.sistema.banco.mapper.Mapper;
 import com.reto.avanzado.sistema.banco.repositories.GenericRepository;
-import com.reto.avanzado.sistema.banco.repository.ClienteRepo;
+import com.reto.avanzado.sistema.banco.repository.ClienteRepository;
 import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import lombok.RequiredArgsConstructor;
 
 @ApplicationScoped
 @RequiredArgsConstructor
-public class PgsClienteAdapter implements ClienteRepo {
+public class PgsClienteAdapter implements ClienteRepository {
 
     //private final ClienteRepository repository;
     private final GenericRepository<ClienteEntity> repository;
