@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-reactive-pg-client</artifactId>
+            <artifactId>quarkus-reactive-mssql-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
